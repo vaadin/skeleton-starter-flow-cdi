@@ -1,19 +1,21 @@
 package com.vaadin.starter.skeleton.cdi;
 
 import com.vaadin.cdi.annotation.NormalUIScoped;
+import com.vaadin.cdi.annotation.VaadinSessionScoped;
 
 /**
- * Data provider bean.
+ * Data provider bean scoped for each user session.
  */
-@NormalUIScoped
+@VaadinSessionScoped
 public class MessageBean {
 
+    private int counter;
     /**
      * Gets message data.
      *
      * @return a message
      */
     public String getMessage() {
-        return "Not Clicked";
+        return new StringBuilder("Message requested ").append(++counter).append(" times.").toString();
     }
 }
