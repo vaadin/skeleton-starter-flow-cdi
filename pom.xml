@@ -16,7 +16,7 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <!-- Dependencies -->
-        <vaadin.version>11.0.0</vaadin.version>
+        <vaadin.version>11.0.2</vaadin.version>
     </properties>
 
     <pluginRepositories>
