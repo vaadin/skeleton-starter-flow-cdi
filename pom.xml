@@ -18,7 +18,7 @@
         <webapp.directory>src/main/webapp</webapp.directory>
 
         <!-- Dependencies -->
-        <vaadin.version>10.0.7</vaadin.version>
+        <vaadin.version>10.0.8</vaadin.version>
     </properties>
 
     <pluginRepositories>
@@ -37,8 +37,8 @@
         </repository>
         <!-- Repository used by many Vaadin add-ons -->
         <repository>
-             <id>Vaadin Directory</id>
-             <url>http://maven.vaadin.com/vaadin-addons</url>
+            <id>Vaadin Directory</id>
+            <url>http://maven.vaadin.com/vaadin-addons</url>
         </repository>        
     </repositories>
 
