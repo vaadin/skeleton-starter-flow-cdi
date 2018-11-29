@@ -16,7 +16,7 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <!-- Dependencies -->
-        <vaadin.version>11.0.2</vaadin.version>
+        <vaadin.version>11.0.3</vaadin.version>
     </properties>
 
     <pluginRepositories>
@@ -35,8 +35,8 @@
         </repository>
         <!-- Repository used by many Vaadin add-ons -->
         <repository>
-             <id>Vaadin Directory</id>
-             <url>http://maven.vaadin.com/vaadin-addons</url>
+            <id>Vaadin Directory</id>
+            <url>http://maven.vaadin.com/vaadin-addons</url>
         </repository>        
     </repositories>
 
