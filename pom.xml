@@ -97,7 +97,7 @@
     <dependencies>
         <dependency>
             <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-core</artifactId>
+            <artifactId>vaadin</artifactId>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
