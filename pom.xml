@@ -186,18 +186,26 @@
                         <artifactId>tomee-maven-plugin</artifactId>
                         <executions>
                             <execution>
-                                <id>pre-integration-test</id>
+                                <id>start</id>
+                                <phase>pre-integration-test</phase>
                                 <goals>
                                     <goal>start</goal>
                                 </goals>
+                                <configuration>
+                                    <checkStarted>true</checkStarted>
+                                </configuration>
                             </execution>
                             <execution>
-                                <id>post-integration-test</id>
+                                <id>stop</id>
+                                <phase>post-integration-test</phase>
                                 <goals>
                                     <goal>stop</goal>
                                 </goals>
                             </execution>
                         </executions>
+                        <configuration>
+                            <simpleLog>true</simpleLog>
+                        </configuration>
                     </plugin>
 
                     <!-- Runs the integration tests (*IT) after the server is started -->
