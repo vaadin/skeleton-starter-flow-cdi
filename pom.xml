@@ -120,6 +120,7 @@
     </dependencies>
 
     <build>
+        <defaultGoal>package tomee:run</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.apache.tomee.maven</groupId>
