@@ -22,10 +22,3 @@ mvn clean package tomee:run -Pproduction
 For documentation on using Vaadin Flow and CDI, visit [vaadin.com/docs](https://vaadin.com/docs/v10/flow/cdi/tutorial-cdi-basic.html)
 
 For more information on Vaadin Flow, visit https://vaadin.com/flow.
-
-Branching information:
-* `master` the latest version of the starter, using the latest platform version
-* `v10` the version for Vaadin 10
-* `v11` the version for Vaadin 11
-* `v12` the version for Vaadin 12
-* `v13` the version for Vaadin 13
