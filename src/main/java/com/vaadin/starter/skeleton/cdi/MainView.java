@@ -6,6 +6,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
 /**
@@ -18,7 +19,8 @@ public class MainView extends VerticalLayout {
     @Inject
     private MessageBean messageBean;
 
-    public MainView() {
+    @PostConstruct
+    public void init() {
         Button button = new Button("Click me",
                 event -> Notification.show(messageBean.getMessage()));
         add(button);
