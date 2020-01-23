@@ -1,4 +1,4 @@
-package com.vaadin.starter.skeleton.cdi;
+package org.vaadin.example;
 
 import com.vaadin.cdi.annotation.VaadinSessionScoped;
 
