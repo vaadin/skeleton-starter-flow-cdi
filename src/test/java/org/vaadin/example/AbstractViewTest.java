@@ -1,4 +1,4 @@
-package com.vaadin.starter.skeleton.cdi;
+package org.vaadin.example;
 
 import org.junit.Assert;
 import org.junit.Before;
