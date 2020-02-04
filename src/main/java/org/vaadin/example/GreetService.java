@@ -8,7 +8,7 @@ import com.vaadin.cdi.annotation.VaadinSessionScoped;
 @VaadinSessionScoped
 public class GreetService {
 
-    public static String greet(String name) {
+    public String greet(String name) {
         if (name == null || name.isEmpty()) {
             return "Hello anonymous user";
         } else {
