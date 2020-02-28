@@ -34,7 +34,6 @@ public class MainViewIT extends AbstractViewTest {
         assertThemePresentOnElement(element, Lumo.class);
     }
 
-
     @Test
     public void testClickButtonShowsHelloAnonymousUserNotificationWhenUserNameIsEmpty() {
         ButtonElement button = $(ButtonElement.class).first();
