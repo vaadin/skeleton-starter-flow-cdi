@@ -14,7 +14,8 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
 /**
- * The main view contains a simple label element and a template element.
+ * The main view contains a text field for getting the user name and a button
+ * that shows a greeting message in a notification.
  */
 @Route("")
 @PWA(name = "Project Base for Vaadin Flow with CDI", shortName = "Project Base")
