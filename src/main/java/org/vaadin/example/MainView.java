@@ -18,7 +18,6 @@ import javax.inject.Inject;
  * that shows a greeting message in a notification.
  */
 @Route("")
-@PWA(name = "Project Base for Vaadin Flow with CDI", shortName = "Project Base")
 @CssImport("./styles/shared-styles.css")
 @CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
 public class MainView extends VerticalLayout {
@@ -32,8 +31,8 @@ public class MainView extends VerticalLayout {
         TextField textField = new TextField("Your name");
 
         // Button click listeners can be defined as lambda expressions
-        Button button = new Button("Say hello",
-                e -> Notification.show(greetService.greet(textField.getValue())));
+        Button button = new Button("Say hello", e -> Notification
+                .show(greetService.greet(textField.getValue())));
 
         // Theme variants give you predefined extra styles for components.
         // Example: Primary button is more prominent look.
@@ -43,7 +42,8 @@ public class MainView extends VerticalLayout {
         // Example: Pressing enter in this view clicks the Button.
         button.addClickShortcut(Key.ENTER);
 
-        // Use custom CSS classes to apply styling. This is defined in shared-styles.css.
+        // Use custom CSS classes to apply styling. This is defined in
+        // shared-styles.css.
         addClassName("centered-content");
 
         add(textField, button);
