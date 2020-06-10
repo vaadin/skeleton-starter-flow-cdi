@@ -5,6 +5,8 @@ It contains all the necessary configuration and some placeholder files to get yo
 
 The best way to use it is via [vaadin.com/start](https://vaadin.com/start) - you can get only the necessary parts and choose the package naming you want to use.
 
+## Running the Application
+
 Import the project to the IDE of your choosing as a Maven project. 
 
 Run application using
@@ -19,7 +21,15 @@ If you want to run your app locally in the production mode, run using
 mvn clean package tomee:run -Pproduction
 ```
 
-To run Integration Tests, execute `mvn verify -Pit`.
+### Running Integration Tests
+
+Integration tests are implemented using [Vaadin TestBench](https://vaadin.com/testbench). The tests take a few minutes to run and are therefore included in a separate Maven profile. We recommend running tests with a production build to minimize the chance of development time toolchains affecting test stability. To run the tests using Google Chrome, execute
+
+`mvn verify -Pit -Pproduction`
+
+and make sure you have a valid TestBench license installed.
+
+### Deployment
 
 The application is deployed on the [Apache TomEE](http://tomee.apache.org/) server via the `tomee-maven-plugin`, which supports hot deployment of code changes (via the `reloadOnUpdate` setting).
 This means that you can make changes to the code in your IDE while the server is running, recompile, and have the server automatically pick up the changes and redeploy them.
