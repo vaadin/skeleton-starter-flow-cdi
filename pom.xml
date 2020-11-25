@@ -17,7 +17,7 @@
 
         <!-- Dependencies -->
 
-        <vaadin.version>18.0.0.beta3</vaadin.version>
+        <vaadin.version>18.0.0.rc1</vaadin.version>
     </properties>
 
     <repositories>
