@@ -17,7 +17,7 @@
 
         <!-- Dependencies -->
 
-        <vaadin.version>20.0.0.alpha8</vaadin.version>
+        <vaadin.version>20.0.0.beta1</vaadin.version>
     </properties>
 
     <repositories>
