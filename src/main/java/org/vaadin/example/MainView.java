@@ -1,5 +1,9 @@
 package org.vaadin.example;
 
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
+
+import com.vaadin.cdi.annotation.RouteScopeOwner;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -7,9 +11,6 @@ import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
-
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
 
 /**
  * The main view contains a text field for getting the user name and a button
@@ -19,6 +20,7 @@ import javax.inject.Inject;
 public class MainView extends VerticalLayout {
 
     @Inject
+    @RouteScopeOwner(AnotherRoute.class)
     private GreetService greetService;
 
     @PostConstruct
