@@ -10,7 +10,7 @@
     "@vaadin/vaadin-split-layout": "4.3.0",
     "@vaadin/vaadin-combo-box": "5.4.7",
     "@vaadin/vaadin-cookie-consent": "1.2.0",
-    "@vaadin/vaadin-core-shrinkwrap": "14.6.1",
+    "@vaadin/vaadin-core-shrinkwrap": "14.6.2",
     "@vaadin/vaadin-upload": "4.4.1",
     "@vaadin/vaadin-dialog": "2.5.2",
     "@vaadin/vaadin-select": "2.4.0",
@@ -21,7 +21,7 @@
     "@vaadin/vaadin-notification": "1.6.1",
     "@vaadin/vaadin-grid-pro": "2.3.0",
     "@vaadin/vaadin-progress-bar": "1.3.0",
-    "@vaadin/vaadin-shrinkwrap": "14.6.1",
+    "@vaadin/vaadin-shrinkwrap": "14.6.2",
     "@vaadin/vaadin-date-time-picker": "1.4.0",
     "@vaadin/vaadin-ordered-layout": "1.4.0",
     "@vaadin/vaadin-login": "1.2.0",
@@ -47,7 +47,8 @@
     "@vaadin/vaadin-rich-text-editor": "1.3.0",
     "lit-element": "2.5.1",
     "@vaadin/vaadin-avatar": "1.0.4",
-    "lit-html": "1.4.1"
+    "lit-html": "1.4.1",
+    "construct-style-sheets-polyfill": "2.4.16"
   },
   "devDependencies": {
     "webpack": "4.42.0",
@@ -79,7 +80,7 @@
       "@vaadin/vaadin-split-layout": "4.3.0",
       "@vaadin/vaadin-combo-box": "5.4.7",
       "@vaadin/vaadin-cookie-consent": "1.2.0",
-      "@vaadin/vaadin-core-shrinkwrap": "14.6.1",
+      "@vaadin/vaadin-core-shrinkwrap": "14.6.2",
       "@vaadin/vaadin-upload": "4.4.1",
       "@vaadin/vaadin-dialog": "2.5.2",
       "@vaadin/vaadin-select": "2.4.0",
@@ -90,7 +91,7 @@
       "@vaadin/vaadin-notification": "1.6.1",
       "@vaadin/vaadin-grid-pro": "2.3.0",
       "@vaadin/vaadin-progress-bar": "1.3.0",
-      "@vaadin/vaadin-shrinkwrap": "14.6.1",
+      "@vaadin/vaadin-shrinkwrap": "14.6.2",
       "@vaadin/vaadin-date-time-picker": "1.4.0",
       "@vaadin/vaadin-ordered-layout": "1.4.0",
       "@vaadin/vaadin-login": "1.2.0",
@@ -116,7 +117,8 @@
       "@vaadin/vaadin-rich-text-editor": "1.3.0",
       "lit-element": "2.5.1",
       "@vaadin/vaadin-avatar": "1.0.4",
-      "lit-html": "1.4.1"
+      "lit-html": "1.4.1",
+      "construct-style-sheets-polyfill": "2.4.16"
     },
     "devDependencies": {
       "webpack-babel-multi-target-plugin": "2.3.3",
@@ -138,6 +140,6 @@
       "construct-style-sheets-polyfill": "2.4.6",
       "extract-loader": "5.1.0"
     },
-    "hash": "000dcce2fcc608a7401daf08b4bd7d6efb0b905ca91786747dc921625505f051"
+    "hash": "cc3830a1dbe176b8f202f8b70d9ae522dbbd39c4be48bce2b23e34ac990adf45"
   }
 }
