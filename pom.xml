@@ -126,7 +126,7 @@
             <plugin>
                 <groupId>org.apache.tomee.maven</groupId>
                 <artifactId>tomee-maven-plugin</artifactId>
-                <version>7.1.1</version>
+                <version>8.0.7</version>
                 <configuration>
                     <tomeeClassifier>webprofile</tomeeClassifier>
                     <context>ROOT</context>
@@ -141,6 +141,12 @@
                         <tomee.serialization.class.blacklist>-</tomee.serialization.class.blacklist>
                     </systemVariables>
                 </configuration>
+            </plugin>
+                 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
             </plugin>
 
             <!--
