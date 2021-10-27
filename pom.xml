@@ -121,12 +121,13 @@
     </dependencies>
 
     <build>
-        <defaultGoal>package tomee:run</defaultGoal>
+        <defaultGoal>package wildfly:run</defaultGoal>
+        
         <plugins>
             <plugin>
                 <groupId>org.apache.tomee.maven</groupId>
                 <artifactId>tomee-maven-plugin</artifactId>
-                <version>8.0.7</version>
+                <version>8.0.8</version>
                 <configuration>
                     <tomeeClassifier>webprofile</tomeeClassifier>
                     <context>ROOT</context>
@@ -142,6 +143,12 @@
                     </systemVariables>
                 </configuration>
             </plugin>
+            
+        <plugin>
+            <groupId>org.wildfly.plugins</groupId>
+            <artifactId>wildfly-maven-plugin</artifactId>
+            <version>2.1.0.Final</version>
+        </plugin>
                  
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -198,14 +205,15 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.apache.tomee.maven</groupId>
-                        <artifactId>tomee-maven-plugin</artifactId>
+                        <groupId>org.wildfly.plugins</groupId>
+                        <artifactId>wildfly-maven-plugin</artifactId>
                         <executions>
                             <execution>
                                 <id>start</id>
                                 <phase>pre-integration-test</phase>
                                 <goals>
                                     <goal>start</goal>
+                                    <goal>deploy</goal>
                                 </goals>
                                 <configuration>
                                     <checkStarted>true</checkStarted>
@@ -215,7 +223,7 @@
                                 <id>stop</id>
                                 <phase>post-integration-test</phase>
                                 <goals>
-                                    <goal>stop</goal>
+                                    <goal>shutdown</goal>
                                 </goals>
                             </execution>
                         </executions>
