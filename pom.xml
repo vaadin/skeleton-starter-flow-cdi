@@ -121,12 +121,12 @@
     </dependencies>
 
     <build>
-        <defaultGoal>package tomee:run</defaultGoal>
+        <defaultGoal>package wildfly:run</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.apache.tomee.maven</groupId>
                 <artifactId>tomee-maven-plugin</artifactId>
-                <version>7.1.1</version>
+                <version>8.0.8</version>
                 <configuration>
                     <tomeeClassifier>webprofile</tomeeClassifier>
                     <context>ROOT</context>
@@ -141,6 +141,18 @@
                         <tomee.serialization.class.blacklist>-</tomee.serialization.class.blacklist>
                     </systemVariables>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>2.1.0.Final</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
             </plugin>
 
             <!--
@@ -200,8 +212,8 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.apache.tomee.maven</groupId>
-                        <artifactId>tomee-maven-plugin</artifactId>
+                        <groupId>org.wildfly.plugins</groupId>
+                        <artifactId>wildfly-maven-plugin</artifactId>
                         <executions>
                             <execution>
                                 <id>start</id>
@@ -217,7 +229,7 @@
                                 <id>stop</id>
                                 <phase>post-integration-test</phase>
                                 <goals>
-                                    <goal>stop</goal>
+                                    <goal>shutdown</goal>
                                 </goals>
                             </execution>
                         </executions>
