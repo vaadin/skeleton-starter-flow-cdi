@@ -17,7 +17,7 @@
 
         <!-- Dependencies -->
 
-        <vaadin.version>23.0.2</vaadin.version>
+        <vaadin.version>23.0.4</vaadin.version>
     </properties>
 
     <repositories>
@@ -115,7 +115,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.0.3</version>
+            <version>5.1.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
