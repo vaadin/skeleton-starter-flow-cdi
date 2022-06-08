@@ -34,9 +34,6 @@
             <url>
                 https://maven.vaadin.com/vaadin-prereleases/
             </url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
         </repository>
         <!-- Repository used by many Vaadin add-ons -->
         <repository>
@@ -62,9 +59,6 @@
             <url>
                 https://maven.vaadin.com/vaadin-prereleases/
             </url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
         </pluginRepository>
     </pluginRepositories>
 
