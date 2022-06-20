@@ -9,15 +9,15 @@
     <packaging>war</packaging>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <!-- Dependencies -->
 
-        <vaadin.version>19.0.0.alpha5</vaadin.version>
+        <vaadin.version>23.1.1</vaadin.version>
     </properties>
 
     <repositories>
@@ -115,18 +115,19 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>3.8.1</version>
+            <version>5.1.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
 
     <build>
-        <defaultGoal>package tomee:run</defaultGoal>
+        <defaultGoal>package wildfly:run</defaultGoal>
+        
         <plugins>
             <plugin>
                 <groupId>org.apache.tomee.maven</groupId>
                 <artifactId>tomee-maven-plugin</artifactId>
-                <version>7.1.1</version>
+                <version>8.0.11</version>
                 <configuration>
                     <tomeeClassifier>webprofile</tomeeClassifier>
                     <context>ROOT</context>
@@ -141,6 +142,20 @@
                         <tomee.serialization.class.blacklist>-</tomee.serialization.class.blacklist>
                     </systemVariables>
                 </configuration>
+            </plugin>
+            
+        <plugin>
+            <groupId>org.wildfly.plugins</groupId>
+            <artifactId>wildfly-maven-plugin</artifactId>
+            <version>3.0.0.Final</version>
+            <configuration>
+            </configuration>
+        </plugin>
+                 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
             </plugin>
 
             <!--
@@ -192,14 +207,15 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.apache.tomee.maven</groupId>
-                        <artifactId>tomee-maven-plugin</artifactId>
+                        <groupId>org.wildfly.plugins</groupId>
+                        <artifactId>wildfly-maven-plugin</artifactId>
                         <executions>
                             <execution>
                                 <id>start</id>
                                 <phase>pre-integration-test</phase>
                                 <goals>
                                     <goal>start</goal>
+                                    <goal>deploy</goal>
                                 </goals>
                                 <configuration>
                                     <checkStarted>true</checkStarted>
@@ -209,7 +225,7 @@
                                 <id>stop</id>
                                 <phase>post-integration-test</phase>
                                 <goals>
-                                    <goal>stop</goal>
+                                    <goal>shutdown</goal>
                                 </goals>
                             </execution>
                         </executions>

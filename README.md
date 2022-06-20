@@ -11,14 +11,14 @@ Import the project to the IDE of your choosing as a Maven project.
 
 Run application using
 ```
-mvn clean package tomee:run
+mvn wildfly:run
 ```
 
 Open [http://localhost:8080/](http://localhost:8080/) in browser.
 
 If you want to run your app locally in the production mode, run using
 ```
-mvn clean package tomee:run -Pproduction
+mvn clean package wildfly:run -Pproduction
 ```
 
 ### Running Integration Tests
@@ -31,7 +31,9 @@ and make sure you have a valid TestBench license installed.
 
 ### Deployment
 
-The application is deployed on the [Apache TomEE](http://tomee.apache.org/) server via the `tomee-maven-plugin`, which supports hot deployment of code changes (via the `reloadOnUpdate` setting).
+The project is a standard Java/Jakarta EE application, so you can deploy it as you see best, via IDE or using Maven plugins. Wildfly and TomEE plugins are pre-configured for easy testing. Wildfly plugin is used for integration tests. Currently only Wildfly properly supports Java 17.
+
+The application can be deployed on the [Apache TomEE](http://tomee.apache.org/) server via the `tomee-maven-plugin`, which supports hot deployment of code changes (via the `reloadOnUpdate` setting).
 This means that you can make changes to the code in your IDE while the server is running, recompile, and have the server automatically pick up the changes and redeploy them.
 This setting is enabled by default in this project.
 
