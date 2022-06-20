@@ -17,7 +17,7 @@
 
         <!-- Dependencies -->
 
-        <vaadin.version>23.0.0.alpha3</vaadin.version>
+        <vaadin.version>23.1.1</vaadin.version>
     </properties>
 
     <repositories>
@@ -115,7 +115,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.0.3</version>
+            <version>5.1.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -127,7 +127,7 @@
             <plugin>
                 <groupId>org.apache.tomee.maven</groupId>
                 <artifactId>tomee-maven-plugin</artifactId>
-                <version>8.0.8</version>
+                <version>8.0.11</version>
                 <configuration>
                     <tomeeClassifier>webprofile</tomeeClassifier>
                     <context>ROOT</context>
@@ -147,13 +147,15 @@
         <plugin>
             <groupId>org.wildfly.plugins</groupId>
             <artifactId>wildfly-maven-plugin</artifactId>
-            <version>2.1.0.Final</version>
+            <version>3.0.0.Final</version>
+            <configuration>
+            </configuration>
         </plugin>
                  
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>
+                <version>3.3.2</version>
             </plugin>
 
             <!--
