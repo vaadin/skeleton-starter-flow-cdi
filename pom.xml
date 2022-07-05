@@ -34,9 +34,6 @@
             <url>
                 https://maven.vaadin.com/vaadin-prereleases/
             </url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
         </repository>
         <!-- Repository used by many Vaadin add-ons -->
         <repository>
@@ -62,9 +59,6 @@
             <url>
                 https://maven.vaadin.com/vaadin-prereleases/
             </url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
         </pluginRepository>
     </pluginRepositories>
 
@@ -115,7 +109,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.1.0</version>
+            <version>5.2.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
