@@ -9,15 +9,16 @@
     <packaging>war</packaging>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <!-- Dependencies -->
 
-        <vaadin.version>23.2.0.beta2</vaadin.version>
+        <vaadin.version>23.2.0</vaadin.version>
+        <flow.version>24.0-SNAPSHOT</flow.version>
     </properties>
 
     <repositories>
@@ -67,7 +68,7 @@
             <dependency>
                 <groupId>com.vaadin</groupId>
                 <artifactId>flow-bom</artifactId>
-                <version>23.2.jakarta-servlet5-SNAPSHOT</version>
+                <version>${flow.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -90,7 +91,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-cdi</artifactId>
-            <version>14.0-SNAPSHOT</version>
+            <version>15.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>javax</groupId>
@@ -124,7 +125,7 @@
 
     <build>
         <defaultGoal>package wildfly:run</defaultGoal>
-        
+
         <plugins>
             <plugin>
                 <groupId>org.apache.tomee.maven</groupId>
@@ -145,7 +146,7 @@
                     </systemVariables>
                 </configuration>
             </plugin>
-            
+
         <plugin>
             <groupId>org.wildfly.plugins</groupId>
             <artifactId>wildfly-maven-plugin</artifactId>
@@ -155,7 +156,7 @@
                 <feature-pack-location>wildfly-preview@maven(org.jboss.universe:community-universe)</feature-pack-location>
             </configuration>
         </plugin>
-                 
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
