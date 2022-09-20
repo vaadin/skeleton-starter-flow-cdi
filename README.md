@@ -1,4 +1,3 @@
-# Project Base for Vaadin Flow and CDI
 
 This project can be used as a starting point to create your own Vaadin Flow application with CDI.
 It contains all the necessary configuration and some placeholder files to get you started.
