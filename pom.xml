@@ -217,6 +217,9 @@
                                 </goals>
                                 <configuration>
                                     <checkStarted>true</checkStarted>
+                                    <server-args>
+                                        <server-arg>-b=0.0.0.0</server-arg>
+                                    </server-args>
                                 </configuration>
                             </execution>
                             <execution>
