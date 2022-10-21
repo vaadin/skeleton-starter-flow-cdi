@@ -17,8 +17,9 @@
 
         <!-- Dependencies -->
 
-        <vaadin.version>23.2.0</vaadin.version>
-        <flow.version>24.0-SNAPSHOT</flow.version>
+        <vaadin.version>24.0-SNAPSHOT</vaadin.version>
+        <flow.version>24.0.0.alpha4</flow.version>
+        <cdi.version>15.0.0.alpha1</cdi.version>
     </properties>
 
     <repositories>
@@ -91,7 +92,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-cdi</artifactId>
-            <version>15.0-SNAPSHOT</version>
+            <version>${cdi.version}</version>
         </dependency>
         <dependency>
             <groupId>javax</groupId>
@@ -152,7 +153,7 @@
             <artifactId>wildfly-maven-plugin</artifactId>
             <version>4.0.0.Beta3</version>
             <configuration>
-                <version>26.1.1.Final</version>
+                <version>26.1.2.Final</version>
                 <feature-pack-location>wildfly-preview@maven(org.jboss.universe:community-universe)</feature-pack-location>
             </configuration>
         </plugin>
