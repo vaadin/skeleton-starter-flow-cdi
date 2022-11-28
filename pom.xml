@@ -116,7 +116,7 @@
 
     <build>
         <defaultGoal>package wildfly:run</defaultGoal>
-        
+
         <plugins>
             <plugin>
                 <groupId>org.apache.tomee.maven</groupId>
@@ -137,15 +137,15 @@
                     </systemVariables>
                 </configuration>
             </plugin>
-            
-        <plugin>
-            <groupId>org.wildfly.plugins</groupId>
-            <artifactId>wildfly-maven-plugin</artifactId>
-            <version>3.0.0.Final</version>
-            <configuration>
-            </configuration>
-        </plugin>
-                 
+
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>2.1.0.Final</version>
+                <configuration>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
