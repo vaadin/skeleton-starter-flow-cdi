@@ -116,7 +116,7 @@
     "@vaadin/virtual-list": "23.2.10",
     "construct-style-sheets-polyfill": "3.1.0",
     "date-fns": "2.29.3",
-    "lit": "2.3.0",
+    "lit": "2.3.1",
     "proj4": "2.8.0"
   },
   "devDependencies": {
@@ -250,9 +250,9 @@
     "@vaadin/vaadin-grid-pro": "$@vaadin/vaadin-grid-pro",
     "@vaadin/vaadin-rich-text-editor": "$@vaadin/vaadin-rich-text-editor",
     "date-fns": "$date-fns",
+    "lit": "$lit",
     "@vaadin/common-frontend": "$@vaadin/common-frontend",
     "construct-style-sheets-polyfill": "$construct-style-sheets-polyfill",
-    "lit": "$lit",
     "@polymer/polymer": "$@polymer/polymer",
     "proj4": "$proj4"
   },
@@ -392,6 +392,6 @@
       "workbox-core": "6.5.0",
       "workbox-precaching": "6.5.0"
     },
-    "hash": "f232a8912bb4d256c8ae6818d3e8b577cfb788d14ede63e306409f5b8f7c56ec"
+    "hash": "75e492c39c7a31a5d77e5aa22b4f7c681398cc3a7f3af6e5284db3ae69d72a30"
   }
 }
