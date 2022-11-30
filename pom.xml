@@ -143,6 +143,7 @@
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>2.1.0.Final</version>
                 <configuration>
+                    <version>26.1.2.Final</version>
                 </configuration>
             </plugin>
 
