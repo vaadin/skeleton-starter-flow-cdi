@@ -85,7 +85,7 @@
     "transform-ast": "2.4.4",
     "typescript": "4.9.3",
     "vite": "4.0.2",
-    "vite-plugin-checker": "0.5.2",
+    "vite-plugin-checker": "0.5.4",
     "workbox-build": "6.5.4",
     "workbox-core": "6.5.4",
     "workbox-precaching": "6.5.4"
@@ -152,6 +152,12 @@
     "@vaadin/vaadin-usage-statistics": "$@vaadin/vaadin-usage-statistics",
     "@vaadin/vertical-layout": "$@vaadin/vertical-layout",
     "@vaadin/virtual-list": "$@vaadin/virtual-list",
+    "@vaadin/common-frontend": "$@vaadin/common-frontend",
+    "construct-style-sheets-polyfill": "$construct-style-sheets-polyfill",
+    "lit": "$lit",
+    "@polymer/polymer": "$@polymer/polymer",
+    "@vaadin/vaadin-themable-mixin": "$@vaadin/vaadin-themable-mixin",
+    "date-fns": "$date-fns",
     "@vaadin/board": "$@vaadin/board",
     "@vaadin/charts": "$@vaadin/charts",
     "@vaadin/cookie-consent": "$@vaadin/cookie-consent",
@@ -159,13 +165,7 @@
     "@vaadin/grid-pro": "$@vaadin/grid-pro",
     "@vaadin/map": "$@vaadin/map",
     "@vaadin/rich-text-editor": "$@vaadin/rich-text-editor",
-    "@vaadin/common-frontend": "$@vaadin/common-frontend",
-    "construct-style-sheets-polyfill": "$construct-style-sheets-polyfill",
-    "lit": "$lit",
-    "@polymer/polymer": "$@polymer/polymer",
-    "proj4": "$proj4",
-    "@vaadin/vaadin-themable-mixin": "$@vaadin/vaadin-themable-mixin",
-    "date-fns": "$date-fns"
+    "proj4": "$proj4"
   },
   "vaadin": {
     "dependencies": {
@@ -254,11 +254,11 @@
       "transform-ast": "2.4.4",
       "typescript": "4.9.3",
       "vite": "4.0.2",
-      "vite-plugin-checker": "0.5.2",
+      "vite-plugin-checker": "0.5.4",
       "workbox-build": "6.5.4",
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "b329df3c88523d85289790be8ebcb7f1be140345934652a5bdcdd92aeabb4544"
+    "hash": "f8267b76d1c9b35d7aba84a2e44e8ff20792a0f0ff8c335dac3d23b2c490b484"
   }
 }
