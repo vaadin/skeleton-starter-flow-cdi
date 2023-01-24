@@ -17,7 +17,7 @@
 
         <!-- Dependencies -->
 
-        <vaadin.version>24.0.0.alpha2</vaadin.version>
+        <vaadin.version>24.0.0.alpha9</vaadin.version>
     </properties>
 
     <repositories>
@@ -114,12 +114,36 @@
             <version>5.2.1</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.cdi-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
         <defaultGoal>package wildfly:run</defaultGoal>
 
         <plugins>
+            <plugin>
+                <groupId>fish.payara.maven.plugins</groupId>
+                <artifactId>payara-micro-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <configuration>
+                    <!-- payara-micro:bundle takes the version from payaraVersion -->
+                    <payaraVersion>6.2022.2</payaraVersion>
+                    <!-- payara-micro:start takes the version from artifactItem -->
+                    <artifactItem>
+                        <groupId>fish.payara.extras</groupId>
+                        <artifactId>payara-micro</artifactId>
+                        <version>6.2022.2</version>
+                    </artifactItem>
+                    <deployWar>true</deployWar>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.tomee.maven</groupId>
                 <artifactId>tomee-maven-plugin</artifactId>
