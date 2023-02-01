@@ -6,5 +6,4 @@ window.Vaadin.featureFlags.hillaPush = false;
 window.Vaadin.featureFlags.hillaEngine = false;
 window.Vaadin.featureFlags.collaborationEngineBackend = false;
 window.Vaadin.featureFlags.enforceFieldValidation = false;
-window.Vaadin.featureFlags.expressBuild = false;
 export {};

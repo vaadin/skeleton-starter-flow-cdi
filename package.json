@@ -27,7 +27,7 @@
     "@vaadin/field-base": "24.0.0-alpha11",
     "@vaadin/field-highlighter": "24.0.0-alpha11",
     "@vaadin/form-layout": "24.0.0-alpha11",
-    "@vaadin/grid": "24.0.0-alpha11",
+    "@vaadin/grid": "24.0.0-alpha12",
     "@vaadin/grid-pro": "24.0.0-alpha11",
     "@vaadin/horizontal-layout": "24.0.0-alpha11",
     "@vaadin/icon": "24.0.0-alpha11",
@@ -60,7 +60,7 @@
     "@vaadin/text-area": "24.0.0-alpha11",
     "@vaadin/text-field": "24.0.0-alpha11",
     "@vaadin/time-picker": "24.0.0-alpha11",
-    "@vaadin/tooltip": "24.0.0-alpha11",
+    "@vaadin/tooltip": "24.0.0-alpha12",
     "@vaadin/upload": "24.0.0-alpha11",
     "@vaadin/vaadin-development-mode-detector": "2.0.5",
     "@vaadin/vaadin-lumo-styles": "24.0.0-alpha11",
@@ -196,7 +196,7 @@
       "@vaadin/field-base": "24.0.0-alpha11",
       "@vaadin/field-highlighter": "24.0.0-alpha11",
       "@vaadin/form-layout": "24.0.0-alpha11",
-      "@vaadin/grid": "24.0.0-alpha11",
+      "@vaadin/grid": "24.0.0-alpha12",
       "@vaadin/grid-pro": "24.0.0-alpha11",
       "@vaadin/horizontal-layout": "24.0.0-alpha11",
       "@vaadin/icon": "24.0.0-alpha11",
@@ -229,7 +229,7 @@
       "@vaadin/text-area": "24.0.0-alpha11",
       "@vaadin/text-field": "24.0.0-alpha11",
       "@vaadin/time-picker": "24.0.0-alpha11",
-      "@vaadin/tooltip": "24.0.0-alpha11",
+      "@vaadin/tooltip": "24.0.0-alpha12",
       "@vaadin/upload": "24.0.0-alpha11",
       "@vaadin/vaadin-development-mode-detector": "2.0.5",
       "@vaadin/vaadin-lumo-styles": "24.0.0-alpha11",
@@ -259,6 +259,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "f8267b76d1c9b35d7aba84a2e44e8ff20792a0f0ff8c335dac3d23b2c490b484"
+    "hash": "4239b1338a6dd9c78ff2d4ab66df9faa32a9ed36dfa0004d46cb37876dcbf311"
   }
 }

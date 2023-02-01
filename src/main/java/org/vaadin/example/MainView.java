@@ -1,8 +1,10 @@
 package org.vaadin.example;
 
+import com.vaadin.cdi.annotation.CdiComponent;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
+import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
@@ -16,6 +18,11 @@ import jakarta.inject.Inject;
  * that shows a greeting message in a notification.
  */
 @Route("")
+// bean discovery more is "annotated" by default in CDI 4.0
+// to make it work with current impl of Vaadin CDI
+// we need to place the annotation or add "bean-discovery-mode="all"" to
+// beans.xml
+//@CdiComponent
 public class MainView extends VerticalLayout {
 
     @Inject
@@ -44,6 +51,9 @@ public class MainView extends VerticalLayout {
         addClassName("centered-content");
 
         add(textField, button);
+
+        Grid<String> stringGrid = new Grid<>();
+        add(stringGrid);
     }
 
 }
