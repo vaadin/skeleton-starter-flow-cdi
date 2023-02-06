@@ -1,5 +1,6 @@
 package org.vaadin.example;
 
+import com.vaadin.cdi.annotation.CdiComponent;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -16,6 +17,7 @@ import jakarta.inject.Inject;
  * that shows a greeting message in a notification.
  */
 @Route("")
+@CdiComponent
 public class MainView extends VerticalLayout {
 
     @Inject
