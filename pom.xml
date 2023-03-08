@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
     <artifactId>project-base-flow-cdi</artifactId>
-    <name>Project base for Vaadin Flow 24.0 and CDI 15.0</name>
+    <name>Project base for Vaadin Flow and CDI</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -17,7 +17,7 @@
 
         <!-- Dependencies -->
 
-        <vaadin.version>24.0.0.alpha2</vaadin.version>
+        <vaadin.version>24.0.0</vaadin.version>
     </properties>
 
     <repositories>
@@ -41,14 +41,6 @@
             <url>https://maven.vaadin.com/vaadin-addons</url>
             <snapshots>
                 <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <!-- CDI uses DeltaSpike snapshot, will be removed after stable version is out.-->
-        <repository>
-            <id>apache-snapshot-repository</id>
-            <url>https://repository.apache.org/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
             </snapshots>
         </repository>
     </repositories>
@@ -92,6 +84,12 @@
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-cdi</artifactId>
         </dependency>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>8.0.0</version>
+            <scope>provided</scope>
+        </dependency>
 
         <!-- Added to provide logging output as Flow uses -->
         <!-- the unbound SLF4J no-operation (NOP) logger implementation -->
@@ -123,7 +121,7 @@
             <plugin>
                 <groupId>org.apache.tomee.maven</groupId>
                 <artifactId>tomee-maven-plugin</artifactId>
-                <version>9.0.0.RC1</version>
+                <version>8.0.11</version>
                 <configuration>
                     <tomeeClassifier>webprofile</tomeeClassifier>
                     <context>ROOT</context>
@@ -140,20 +138,12 @@
                 </configuration>
             </plugin>
 
-        <plugin>
-            <groupId>org.wildfly.plugins</groupId>
-            <artifactId>wildfly-maven-plugin</artifactId>
-            <version>4.0.0.Final</version>
-            <configuration>
-                <version>26.1.2.Final</version>
-                <feature-pack-location>wildfly-preview@maven(org.jboss.universe:community-universe)</feature-pack-location>
-            </configuration>
-        </plugin>
-
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>3.0.0.Final</version>
+                <configuration>
+                </configuration>
             </plugin>
 
             <!--
@@ -215,6 +205,9 @@
                                     <goal>start</goal>
                                     <goal>deploy</goal>
                                 </goals>
+                                <configuration>
+                                    <checkStarted>true</checkStarted>
+                                </configuration>
                             </execution>
                             <execution>
                                 <id>stop</id>
@@ -224,6 +217,9 @@
                                 </goals>
                             </execution>
                         </executions>
+                        <configuration>
+                            <simpleLog>true</simpleLog>
+                        </configuration>
                     </plugin>
 
                     <!-- Runs the integration tests (*IT) after the server is started -->

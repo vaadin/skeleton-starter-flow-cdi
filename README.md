@@ -1,9 +1,7 @@
-# Project Base for Vaadin Flow 24.0 and CDI 15.0 
+# Project Base for Vaadin Flow and CDI
 
-This project can be used as a starting point to create your own Vaadin Flow 24.0 application with CDI 15.0.
+This project can be used as a starting point to create your own Vaadin Flow application with CDI.
 It contains all the necessary configuration and some placeholder files to get you started.
-
-Vaadin 24.0 is based on Jakarta EE 9.0 and requires Java 17.
 
 The best way to use it is via [vaadin.com/start](https://vaadin.com/start) - you can get only the necessary parts and choose the package naming you want to use.
 
