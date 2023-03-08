@@ -9,15 +9,15 @@
     <packaging>war</packaging>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <!-- Dependencies -->
 
-        <vaadin.version>23.3.6</vaadin.version>
+        <vaadin.version>24.0.0</vaadin.version>
     </properties>
 
     <repositories>
@@ -85,9 +85,9 @@
             <artifactId>vaadin-cdi</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>8.0.0</version>
             <scope>provided</scope>
         </dependency>
 
@@ -142,9 +142,7 @@
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>2.1.0.Final</version>
-                <configuration>
-                    <version>26.1.2.Final</version>
-                </configuration>
+                <configuration><version>27.0.0.Final</version></configuration>
             </plugin>
 
             <plugin>
@@ -204,32 +202,7 @@
                     <plugin>
                         <groupId>org.wildfly.plugins</groupId>
                         <artifactId>wildfly-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>start</id>
-                                <phase>pre-integration-test</phase>
-                                <goals>
-                                    <goal>start</goal>
-                                    <goal>deploy</goal>
-                                </goals>
-                                <configuration>
-                                    <checkStarted>true</checkStarted>
-                                    <server-args>
-                                        <server-arg>-b=0.0.0.0</server-arg>
-                                    </server-args>
-                                </configuration>
-                            </execution>
-                            <execution>
-                                <id>stop</id>
-                                <phase>post-integration-test</phase>
-                                <goals>
-                                    <goal>shutdown</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <simpleLog>true</simpleLog>
-                        </configuration>
+                        <configuration><version>27.0.0.Final</version></configuration>
                     </plugin>
 
                     <!-- Runs the integration tests (*IT) after the server is started -->

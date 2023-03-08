@@ -60,6 +60,18 @@ export const injectGlobalCss = (css, target, first) => {
     target.adoptedStyleSheets = [...target.adoptedStyleSheets, sheet];
   }
 };
+
+const addLumoImportStyleTag = (lumoStyles, target) => {
+  const styleTag = document.createElement('style');
+  styleTag.type = 'text/css';
+  styleTag.appendChild(document.createTextNode(lumoStyles));
+  // For target document append to head else append to target
+  if (target === document) {
+    document.head.appendChild(styleTag);
+  } else {
+    target.appendChild(styleTag);
+  }
+};
 import stylesCss from 'themes/my-theme/styles.css?inline';
 import { color } from '@vaadin/vaadin-lumo-styles/color.js';
 import { typography } from '@vaadin/vaadin-lumo-styles/typography.js';
@@ -108,10 +120,10 @@ export const applyTheme = (target) => {
   
   if (!document['_vaadintheme_my-theme_componentCss']) {
     registerStyles(
-      'vaadin-text-field',
-      unsafeCSS(vaadinTextFieldCss.toString())
-    );
-    
+        'vaadin-text-field',
+        unsafeCSS(vaadinTextFieldCss.toString())
+      );
+      
     document['_vaadintheme_my-theme_componentCss'] = true;
   }
   injectGlobalCss(color.cssText, target, true);
