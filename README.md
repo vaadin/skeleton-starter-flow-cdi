@@ -3,7 +3,7 @@
 This project can be used as a starting point to create your own Vaadin Flow 24.0 application with CDI 15.0.
 It contains all the necessary configuration and some placeholder files to get you started.
 
-Vaadin 24.0 is based on Jakarta EE 9.0 and requires Java 17.
+Vaadin 24.0 is based on Jakarta EE 10.0 and requires Java 17.
 
 The best way to use it is via [vaadin.com/start](https://vaadin.com/start) - you can get only the necessary parts and choose the package naming you want to use.
 
