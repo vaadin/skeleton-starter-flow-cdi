@@ -118,7 +118,7 @@
     "construct-style-sheets-polyfill": "3.1.0",
     "date-fns": "2.29.3",
     "lit": "2.6.1",
-    "proj4": "2.8.1"
+    "proj4": "2.9.0"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "3.1.0",
@@ -397,6 +397,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "c06b4227965e75dbd747bbd5748431f86e8d2c579fc120da937c957c284241ce"
+    "hash": "16bd051b9558ef1f1f2a1e5580a354b1e3f9ae49e21e25ed218c784b55e982a8"
   }
 }
