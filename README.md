@@ -1,4 +1,4 @@
-# Project Base for Vaadin Flow 24.0 and CDI 15.0 
+# Project Base for Vaadin Flow 24.0
 
 This project can be used as a starting point to create your own Vaadin Flow 24.0 application with CDI 15.0.
 It contains all the necessary configuration and some placeholder files to get you started.
