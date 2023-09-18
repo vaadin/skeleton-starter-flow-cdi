@@ -17,7 +17,7 @@
 
         <!-- Dependencies -->
 
-        <vaadin.version>24.1.9</vaadin.version>
+        <vaadin.version>24.1.10</vaadin.version>
     </properties>
 
     <dependencyManagement>
