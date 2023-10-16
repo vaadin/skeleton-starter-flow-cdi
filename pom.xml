@@ -18,6 +18,8 @@
         <!-- Dependencies -->
         <vaadin.version>14.10.8</vaadin.version>
 
+        <wildfly.version>22.0.0.Final</wildfly.version>
+
         <drivers.dir>${project.basedir}/drivers</drivers.dir>
         <drivers.downloader.phase>pre-integration-test</drivers.downloader.phase>
     </properties>
