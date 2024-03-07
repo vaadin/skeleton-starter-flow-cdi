@@ -85,10 +85,10 @@
             <plugin>
                 <groupId>org.apache.tomee.maven</groupId>
                 <artifactId>tomee-maven-plugin</artifactId>
-                <!-- Note, technically Vaadin 24 supports only Jakarta EE 10+, 
+                <!-- Note, technically Vaadin 24 supports only Jakarta EE 10+,
                 but in reality EE 9 compatible container like TomEE 9 works just fine.
                 Currently TomEE 10 is only in pre-release stage... -->
-                <version>9.0.0</version>
+                <version>9.1.2</version>
                 <configuration>
                     <tomeeClassifier>webprofile</tomeeClassifier>
                     <context>ROOT</context>
@@ -108,9 +108,9 @@
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-                <version>4.0.0.Final</version>
+                <version>4.2.2.Final</version>
                 <configuration>
-                    <version>27.0.1.Final</version>
+                    <version>31.0.1.Final</version>
                 </configuration>
             </plugin>
 
