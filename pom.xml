@@ -17,8 +17,10 @@
 
         <!-- Dependencies -->
 
-        <vaadin.version>24.3.7</vaadin.version>
+        <vaadin.version>24.4.0.alpha14</vaadin.version>
     </properties>
+    <pluginRepositories><pluginRepository><id>v</id><url>https://maven.vaadin.com/vaadin-prereleases</url></pluginRepository></pluginRepositories>
+    <repositories><repository><id>v</id><url>https://maven.vaadin.com/vaadin-prereleases</url></repository></repositories>
 
     <dependencyManagement>
         <dependencies>
@@ -43,6 +45,12 @@
             <groupId>com.vaadin</groupId>
             <!-- Replace artifactId with vaadin-core to use only free components -->
             <artifactId>vaadin</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>hilla-dev</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
