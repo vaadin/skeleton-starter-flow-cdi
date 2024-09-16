@@ -16,7 +16,7 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <!-- Dependencies -->
-        <vaadin.version>14.12.0</vaadin.version>
+        <vaadin.version>14.12.1</vaadin.version>
 
         <wildfly.version>22.0.0.Final</wildfly.version>
 
