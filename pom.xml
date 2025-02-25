@@ -17,7 +17,7 @@
 
         <!-- Dependencies -->
 
-        <vaadin.version>24.6.5</vaadin.version>
+        <vaadin.version>24.7.0.alpha12</vaadin.version>
     </properties>
 
     <dependencyManagement>
@@ -70,6 +70,19 @@
 
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>vaadin-prereleases</id>
+            <url>https://maven.vaadin.com/vaadin-prereleases/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>vaadin-prereleases</id>
+            <url>https://maven.vaadin.com/vaadin-prereleases/</url>
+        </pluginRepository>
+    </pluginRepositories>
     <build>
         <defaultGoal>package wildfly:run</defaultGoal>
 
