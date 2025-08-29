@@ -17,8 +17,26 @@
 
         <!-- Dependencies -->
 
-        <vaadin.version>25.0-SNAPSHOT</vaadin.version>
+        <vaadin.version>25.0.0-alpha7</vaadin.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>vaadin-prereleases</id>
+            <url>
+            https://maven.vaadin.com/vaadin-prereleases/
+            </url>
+        </repository>
+    </repositories>
+    
+    <pluginRepositories>
+        <pluginRepository>
+            <id>vaadin-prereleases</id>
+            <url>
+            https://maven.vaadin.com/vaadin-prereleases/
+            </url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencyManagement>
         <dependencies>
