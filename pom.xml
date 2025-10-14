@@ -16,8 +16,7 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <!-- Dependencies -->
-
-        <vaadin.version>25.0.0-alpha8</vaadin.version>
+        <vaadin.version>25.0.0-alpha14</vaadin.version>
     </properties>
 
     <repositories>
@@ -71,6 +70,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-cdi</artifactId>
+            <version>16.0-SNAPSHOT</version>
         </dependency>
 
         <!-- Added to provide logging output as Flow uses -->
@@ -115,7 +115,7 @@
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-                <version>5.1.2.Final</version>
+                <version>5.1.4.Final</version>
                 <configuration>
                     <version>36.0.1.Final</version>
                 </configuration>
