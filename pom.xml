@@ -9,15 +9,15 @@
     <packaging>war</packaging>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.release>21</maven.compiler.release>
+        <maven.compiler.source>${maven.compiler.release}</maven.compiler.source>
+        <maven.compiler.target>${maven.compiler.release}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <!-- Dependencies -->
-
-        <vaadin.version>25.0.0-alpha8</vaadin.version>
+        <vaadin.version>25.0.0-alpha14</vaadin.version>
     </properties>
 
     <repositories>
@@ -115,7 +115,7 @@
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-                <version>5.1.2.Final</version>
+                <version>5.1.4.Final</version>
                 <configuration>
                     <version>36.0.1.Final</version>
                 </configuration>
