@@ -17,7 +17,7 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <!-- Dependencies -->
-        <vaadin.version>25.0-SNAPSHOT</vaadin.version>
+        <vaadin.version>25.0.0-beta6</vaadin.version>
     </properties>
 
     <repositories>
