@@ -3,7 +3,7 @@
 This project can be used as a starting point to create your own Vaadin Flow 25.0 application with CDI 16.0.
 It contains all the necessary configuration and some placeholder files to get you started.
 
-Vaadin 25.0 is based on Jakarta EE 11.0 and requires Java 17.
+Vaadin 25.0 is based on Jakarta EE 11.0 and requires Java 21.
 
 The best way to use it is via [vaadin.com/start](https://vaadin.com/start) - you can get only the necessary parts and choose the package naming you want to use.
 
@@ -11,16 +11,16 @@ The best way to use it is via [vaadin.com/start](https://vaadin.com/start) - you
 
 Import the project to the IDE of your choosing as a Maven project. 
 
-Run application using
+Run application in development mode using
 ```
-mvn wildfly:run
+mvn wildfly:run -Pdevelopment
 ```
 
 Open [http://localhost:8080/](http://localhost:8080/) in browser.
 
 If you want to run your app locally in the production mode, run using
 ```
-mvn clean package wildfly:run -Pproduction
+mvn clean package wildfly:run
 ```
 
 ### Running Integration Tests

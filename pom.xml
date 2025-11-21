@@ -17,7 +17,7 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <!-- Dependencies -->
-        <vaadin.version>25.0.0-beta5</vaadin.version>
+        <vaadin.version>25.0.0-beta6</vaadin.version>
     </properties>
 
     <repositories>
@@ -124,7 +124,6 @@
             <!--
                 Take care of synchronizing java dependencies and imports in
                 package.json and main.js files.
-                It also creates webpack.config.js if not exists yet.
             -->
             <plugin>
                 <groupId>com.vaadin</groupId>
@@ -143,21 +142,11 @@
 
     <profiles>
         <profile>
-            <!-- Production mode is activated using -Pproduction -->
+            <!-- Production mode is activated by default -->
             <id>production</id>
-            <dependencies>
-                <!-- Exclude development dependencies from production -->
-                <dependency>
-                    <groupId>com.vaadin</groupId>
-                    <artifactId>vaadin-core</artifactId>
-                    <exclusions>
-                        <exclusion>
-                            <groupId>com.vaadin</groupId>
-                            <artifactId>vaadin-dev</artifactId>
-                        </exclusion>
-                    </exclusions>
-                </dependency>
-            </dependencies>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
@@ -173,6 +162,17 @@
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+        <profile>
+            <!-- Development mode is activated using -Pdevelopment -->
+            <id>development</id>
+            <dependencies>
+                <!-- Include development dependencies -->
+                <dependency>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>vaadin-dev</artifactId>
+                </dependency>
+            </dependencies>
         </profile>
 
         <profile>
