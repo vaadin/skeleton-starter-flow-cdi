@@ -1,6 +1,6 @@
 # Project Base for Vaadin Flow 25.0
 
-This project can be used as a starting point to create your own Vaadin Flow 25.0 application with CDI 16.0.
+This project can be used as a starting point to create your own Vaadin Flow 25.0 application with CDI.
 It contains all the necessary configuration and some placeholder files to get you started.
 
 Vaadin 25.0 is based on Jakarta EE 11.0 and requires Java 21.
@@ -33,9 +33,9 @@ and make sure you have a valid TestBench license installed.
 
 ### Deployment
 
-The project is a standard Java/Jakarta EE application, so you can deploy it as you see best, via IDE or using Maven plugins. Wildfly and TomEE plugins are pre-configured for easy testing. Wildfly plugin is used for integration tests. Currently only Wildfly properly supports Java 17.
+The project is a standard Java/Jakarta EE application, so you can deploy it as you see best, via IDE or using Maven plugins. Wildfly and TomEE plugins are pre-configured for easy testing. Wildfly plugin is used for integration tests. Currently only Wildfly properly supports Jakarta EE 11 and Java 21.
 
-The application can be deployed on the [Apache TomEE](http://tomee.apache.org/) server via the `tomee-maven-plugin`, which supports hot deployment of code changes (via the `reloadOnUpdate` setting).
+Although not officially supported, the application can be deployed also on the [Apache TomEE](http://tomee.apache.org/) server via the `tomee-maven-plugin`, which supports hot deployment of code changes (via the `reloadOnUpdate` setting).
 This means that you can make changes to the code in your IDE while the server is running, recompile, and have the server automatically pick up the changes and redeploy them.
 This setting is enabled by default in this project.
 
