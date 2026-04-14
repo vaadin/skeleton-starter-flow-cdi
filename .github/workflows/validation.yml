@@ -37,8 +37,10 @@ jobs:
           TB_LICENSE=${{secrets.TB_LICENSE}}
           mkdir -p ~/.vaadin/
           echo '{"username":"'`echo $TB_LICENSE | cut -d / -f1`'","proKey":"'`echo $TB_LICENSE | cut -d / -f2`'"}' > ~/.vaadin/proKey
-      - name: Verify
-        run: mvn -B -ntp verify -Pit -Dcom.vaadin.testbench.Parameters.maxAttempts=2 -Dcom.vaadin.testbench.Parameters.headless=true -Dheadless=true
+      - name: Verify in Production mode
+        run: mvn -B -ntp verify -Pit,production -Dcom.vaadin.testbench.Parameters.maxAttempts=2 -Dcom.vaadin.testbench.Parameters.headless=true -Dheadless=true
+      - name: Verify in Development mode
+        run: mvn -B -ntp verify -Pit,development -Dcom.vaadin.testbench.Parameters.maxAttempts=2 -Dcom.vaadin.testbench.Parameters.headless=true -Dheadless=true
       - name: Publish test results
         if: ${{ always() }}
         uses: EnricoMi/publish-unit-test-result-action@v2
