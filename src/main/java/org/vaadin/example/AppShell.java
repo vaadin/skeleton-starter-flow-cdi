@@ -1,8 +1,10 @@
 package org.vaadin.example;
 
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.theme.Theme;
+import com.vaadin.flow.theme.lumo.Lumo;
 
 /**
  * Use the @PWA annotation make the application installable on phones, tablets
@@ -10,5 +12,6 @@ import com.vaadin.flow.theme.Theme;
  */
 @PWA(name = "Project Base for Vaadin", shortName = "Project Base")
 @Theme("my-theme")
+@StyleSheet(Lumo.UTILITY_STYLESHEET)
 public class AppShell implements AppShellConfigurator {
 }
